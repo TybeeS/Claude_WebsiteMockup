@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Dazzling Donuts - our story, our mission, and the team behind your favorite donuts.">
+  <title>About Us | Dazzling Donuts</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Dazzling <span>Donuts</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>About Us</h1>
+    <p>The story behind Dazzling Donuts</p>
+  </section>
+
+  <!-- Our Story -->
+  <section class="section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>Dazzling Donuts started in 2016 as a small family bakery with a simple dream: to create the most delicious, fresh donuts in town.</p> 
+          <p>Our founder, David Smith, learned the art of donut making from his grandmother, who ran a small bakery in his hometown.</p>
+          <p>Today, we continue that legacy by waking up before dawn every day to prepare fresh batches of our handcrafted donuts. We believe that every customer deserves a treat made with love, care, and the best ingredients available.</p>
+        </div>
+        <div class="about-image">
+          <img src="img/new_about_donuts.png" alt="Exterior of Dazzling Donuts">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Values</h2>
+        <p>What we stand for</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⭐</div>
+          <h3>Quality First</h3>
+          <p>We never compromise on ingredients. From organic flour to real butter, every component is carefully selected for quality.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌱</div>
+          <h3>Sustainability</h3>
+          <p>We're committed to reducing our environmental impact through eco-friendly packaging and locally sourced ingredients.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Community</h3>
+          <p>We're proud to be part of this community, supporting local events, schools, and charitable organizations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Milestones -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Journey</h2>
+        <p>Key milestones in our history</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏠</div>
+          <h3>2016</h3>
+          <p>Opened our first small shop on Sweet Street with just 3 donut flavors and a big dream.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>2022</h3>
+          <p>Won "Best Donuts in Town" award and expanded our menu to 20+ flavors.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌟</div>
+          <h3>Today</h3>
+          <p>Serving thousands of happy customers daily while staying true to our roots.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Dazzling Donuts</h3>
+        <p>Making life sweeter, one donut at a time since 2016.</p>
+        <div class="social-links">
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+          <a href="#">🐦</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h3>Hours</h3>
+        <p>Mon - Fri: 6am - 7pm</p>
+        <p>Saturday: 7am - 8pm</p>
+        <p>Sunday: 8am - 5pm</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>123 Maple Ave</p>
+        <p>Donutville, DV 12345</p>
+        <p>(555) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Dazzling Donuts. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
