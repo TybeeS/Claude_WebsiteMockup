@@ -677,7 +677,7 @@ img {
   transition: var(--transition);
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #search-input::placeholder {
