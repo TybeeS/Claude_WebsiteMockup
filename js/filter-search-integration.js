@@ -33,24 +33,44 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to apply both filter and search
   function applyFilterAndSearch() {
     const searchTerm = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
 
     menuItems.forEach(item => {
       const itemCategory = item.getAttribute('data-category');
 
-      // Check category match
       const categoryMatches = selectedCategory === 'all' || itemCategory === selectedCategory;
-
-      // Check search match (use cached text)
       const combinedText = itemTextCache.get(item) || '';
       const searchMatches = searchTerm === '' || combinedText.includes(searchTerm);
 
-      // Show item only if both category AND search match
       if (categoryMatches && searchMatches) {
         item.classList.remove('hidden');
+        item.classList.add('transitioning');
+        visibleCount++;
       } else {
         item.classList.add('hidden');
+        item.classList.add('transitioning');
       }
     });
+
+    // Update result count and no-results message
+    const resultCountEl = document.getElementById('result-count');
+    const noResultsEl = document.getElementById('no-results');
+    const visibleCountEl = document.getElementById('visible-count');
+    const totalCountEl = document.getElementById('total-count');
+
+    if (!resultCountEl || !visibleCountEl || !totalCountEl) {
+      console.warn('Result count elements not found in DOM');
+    } else {
+      visibleCountEl.textContent = visibleCount;
+      totalCountEl.textContent = menuItems.length;
+      resultCountEl.classList.toggle('visible', visibleCount > 0);
+    }
+
+    if (!noResultsEl) {
+      console.warn('No results element not found in DOM');
+    } else {
+      noResultsEl.classList.toggle('visible', visibleCount === 0);
+    }
   }
 
   // Filter button click handler
@@ -91,4 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Apply initial state on page load
   applyFilterAndSearch();
+
+  // Only add transition class after initial load to avoid fade-in on page load
+  setTimeout(() => {
+    menuItems.forEach(item => item.classList.add('transitioning'));
+  }, 0);
 });

@@ -45,6 +45,17 @@
     <button type="button" id="filter-fruity" class="filter-btn" data-category="fruity" aria-pressed="false" aria-label="Show fruity favorites donuts">Fruity Favorites</button>
   </div>
 
+  <!-- Result count display with accessibility -->
+  <div class="result-count" id="result-count" aria-live="polite" aria-atomic="true">
+    Showing <span id="visible-count">0</span> of <span id="total-count">0</span> items
+  </div>
+
+  <!-- No results message -->
+  <div class="no-results" id="no-results" role="status" aria-live="assertive">
+    <h3>No results found</h3>
+    <p>Try adjusting your search or filter selections.</p>
+  </div>
+
   <!-- Classic Donuts -->
   <section class="section section-light">
     <div class="container">
